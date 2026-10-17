@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NexBoard</string>
+    <string name="ime_name">NexBoard Keyboard</string>
+    <string name="subtype_en_us">English (US)</string>
+
+    <!-- Settings & Setup -->
+    <string name="settings_title">NexBoard Configuration</string>
+    <string name="step_enable_title">1. Enable NexBoard</string>
+    <string name="step_enable_desc">Turn on NexBoard in System Settings</string>
+    <string name="btn_enable">Enable in Settings</string>
+
+    <string name="step_select_title">2. Select Default Keyboard</string>
+    <string name="step_select_desc">Choose NexBoard as your active input method</string>
+    <string name="btn_select">Select Keyboard</string>
+
+    <string name="step_test_title">3. Test Keyboard</string>
+    <string name="step_test_desc">Try typing below to experience keypress sounds and toolbar panels</string>
+    <string name="test_field_hint">Tap here to test NexBoard...</string>
+
+    <string name="pref_sound_title">Keypress Sound</string>
+    <string name="pref_sound_desc">Play custom iPhone keypress audio on tap</string>
+    <string name="pref_system_sound_title">Respect System Volume</string>
+    <string name="pref_system_sound_desc">Mute keypress sound when device is on silent/vibrate</string>
+    <string name="pref_haptic_title">Haptic Feedback</string>
+    <string name="pref_haptic_desc">Vibrate gently on every keystroke</string>
+    <string name="pref_theme_title">Theme Mode</string>
+    <string name="pref_amoled_title">Pure AMOLED Black</string>
+    <string name="pref_amoled_desc">Deep pitch black background for OLED screens</string>
+    <string name="pref_layout_mode_title">Keyboard Layout Mode</string>
+
+    <!-- Panels -->
+    <string name="tab_emoji">Emoji</string>
+    <string name="tab_gif">GIFs</string>
+    <string name="tab_edit">Text Edit</string>
+    <string name="tab_clipboard">Clipboard</string>
+    <string name="search_gifs_hint">Search Tenor/Giphy GIFs...</string>
+    <string name="search_clipboard_hint">Search clipboard history...</string>
+    <string name="clipboard_empty">Clipboard history is empty</string>
+    <string name="clipboard_clear_all">Clear All</string>
+</resources>
