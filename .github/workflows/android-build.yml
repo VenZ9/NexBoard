@@ -24,7 +24,9 @@ jobs:
           java-version: '17'
 
       - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
+        run: |
+          echo "Using Android SDK at: $ANDROID_HOME"
+          yes | sdkmanager --licenses > /dev/null 2>&1 || true
 
       - name: Setup Gradle Cache
         uses: gradle/actions/setup-gradle@v4
