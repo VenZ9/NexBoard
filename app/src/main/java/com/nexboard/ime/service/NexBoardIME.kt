@@ -15,12 +15,12 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LifecycleRegistry
 import androidx.lifecycle.ViewModelStore
 import androidx.lifecycle.ViewModelStoreOwner
-import androidx.lifecycle.ViewTreeLifecycleOwner
-import androidx.lifecycle.ViewTreeViewModelStoreOwner
+import androidx.lifecycle.setViewTreeLifecycleOwner
+import androidx.lifecycle.setViewTreeViewModelStoreOwner
 import androidx.savedstate.SavedStateRegistry
 import androidx.savedstate.SavedStateRegistryController
 import androidx.savedstate.SavedStateRegistryOwner
-import androidx.savedstate.ViewTreeSavedStateRegistryOwner
+import androidx.savedstate.setViewTreeSavedStateRegistryOwner
 import com.nexboard.ime.audio.SoundEffectManager
 import com.nexboard.ime.data.clipboard.ClipboardManagerHelper
 import com.nexboard.ime.data.clipboard.ClipboardRepository
@@ -89,16 +89,16 @@ class NexBoardIME : InputMethodService(),
 
     override fun onCreateInputView(): View {
         window?.window?.decorView?.let { decor ->
-            ViewTreeLifecycleOwner.set(decor, this)
-            ViewTreeViewModelStoreOwner.set(decor, this)
-            ViewTreeSavedStateRegistryOwner.set(decor, this)
+            decor.setViewTreeLifecycleOwner(this)
+            decor.setViewTreeViewModelStoreOwner(this)
+            decor.setViewTreeSavedStateRegistryOwner(this)
         }
 
         return ComposeView(this).apply {
             setViewCompositionStrategy(ViewCompositionStrategy.DisposeOnViewTreeLifecycleDestroyed)
-            ViewTreeLifecycleOwner.set(this, this@NexBoardIME)
-            ViewTreeViewModelStoreOwner.set(this, this@NexBoardIME)
-            ViewTreeSavedStateRegistryOwner.set(this, this@NexBoardIME)
+            setViewTreeLifecycleOwner(this@NexBoardIME)
+            setViewTreeViewModelStoreOwner(this@NexBoardIME)
+            setViewTreeSavedStateRegistryOwner(this@NexBoardIME)
 
             setContent {
                 KeyboardRootView(

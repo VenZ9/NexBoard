@@ -505,7 +505,7 @@ private fun MoreSymbolsLayout(
 }
 
 @Composable
-private fun EnterKey(
+private fun RowScope.EnterKey(
     editorInfo: EditorInfo?,
     weight: Float,
     onClick: () -> Unit
